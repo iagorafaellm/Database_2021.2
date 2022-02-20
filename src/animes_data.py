@@ -34,6 +34,15 @@ link = animes_data['link']
 start_date = animes_data['start_date']
 end_date = animes_data['end_date']
 
-print(episodes.min(), episodes.max()) #Ranked column minimum and maximum values
+# print(episodes.min(), episodes.max()) #Ranked column minimum and maximum values
 # print(animes_data.shape) #Checks the shape of the DataFrame
+
+#Testing if we can filter just the animes with information on number of episodes 
+# print("\n")
 # print(animes_data.info())
+# # print(animes_data.loc[episodes == 3057.0])
+# animes_data_ep = animes_data.loc[animes_data['episodes'] <= animes_data['episodes'].max()]
+# print("\n")
+# print(animes_data_ep)
+# print("\n")
+# print(animes_data_ep.info())
