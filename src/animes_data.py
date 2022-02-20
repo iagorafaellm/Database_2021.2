@@ -5,8 +5,6 @@ import pandas as pd
 #Reads the csv file and tranfers the data to the Pandas DataFrame,
 # which is a two-dimensional tabular data
 animes_data = pd.read_csv('../csv_files/animes.csv')
-profiles_data = pd.read_csv('../csv_files/profiles.csv')
-# reviews_data = pd.read_csv('../csv_files/reviews.csv')
 
 #Updates the animes_data DataFrame with only the ranked animes
 #This line has to be here, before the anime column reference lines, in order to use these references to the updated DataFrame
@@ -39,8 +37,3 @@ end_date = animes_data['end_date']
 print(episodes.min(), episodes.max()) #Ranked column minimum and maximum values
 # print(animes_data.shape) #Checks the shape of the DataFrame
 # print(animes_data.info())
-
-
-#Profiles: profile,gender,birthday,favorites_anime,link
-
-#Reviews: uid,profile,anime_uid,text,score,scores,link
