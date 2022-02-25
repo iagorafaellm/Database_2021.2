@@ -34,6 +34,21 @@ link = animes_data['link']
 start_date = animes_data['start_date']
 end_date = animes_data['end_date']
 
+#Creating a dataframe with animes "uid" and it´s respective genres 
+genres = genre.tolist()
+ids = uid.tolist()
+genre_ids = []
+genre_genres = []
+
+for i in range(0,len(ids)):
+    this_genre = genres[i].replace('[','').replace(']','').replace("'","").replace(' ','').split(',')
+    for j in range(0, len(this_genre)):
+        genre_ids.append(ids[i])
+        genre_genres.append(this_genre[j])
+
+genres_data = pd.DataFrame(data={"fk_uids":genre_ids, "genre":genre_genres})
+print(genres_data)
+
 # print(episodes.min(), episodes.max()) #Ranked column minimum and maximum values
 # print(animes_data.shape) #Checks the shape of the DataFrame
 
