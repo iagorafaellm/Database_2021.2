@@ -1,0 +1,21 @@
+• 1 consulta envolvendo apenas as operações de seleção e projeção;
+    ￮ SELECT ranked, anime_id, title, rating FROM score_anime WHERE ranked<=10;
+
+• 2 consultas envolvendo a junção de apenas duas relações, sendo que uma deve conter junção externa;
+    ￮
+    ￮
+
+• 2 consultas envolvendo a junção de três ou mais relações;
+    ￮
+    ￮
+
+• 1 consulta envolvendo uma das operações sobre conjuntos (união, diferença ou intersecção);
+    ￮
+
+• 3 consultas envolvendo funções de agregação;
+    ￮ SELECT gender, count(*) FROM profile GROUP BY gender;
+    ￮
+    ￮
+
+• 1 consulta envolvendo subconsultas aninhadas.
+    ￮
