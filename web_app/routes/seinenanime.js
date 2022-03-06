@@ -1,10 +1,10 @@
 const express = require("express");
 const Router = express.Router();
 const mysqlConnection = require("../connection")
-var profile = [], url = [];
+var id = [], titulo = [], imagem = [];
 
 Router.get("/", (req,res)=>[
-    mysqlConnection.query("SELECT profile_id, profile_url FROM profile LEFT JOIN favorite ON profile_id=fk_profile_profile_id WHERE fk_score_anime_anime_id IS NULL LIMIT 50", (err, rows, fields)=>{
+    mysqlConnection.query("SELECT anime_id, title, img_url FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre='Seinen'", (err, rows, fields)=>{
         if(!err){
             formatData(rows);
             res.send(jsonArray);
@@ -18,10 +18,11 @@ Router.get("/", (req,res)=>[
 
 function formatData(dataArray) {
     for(var i = 0; i < dataArray.length; i++) {
-        profile[i] = dataArray[i].profile_id;
-        url[i] = dataArray[i].profile_url
+        id[i] = dataArray[i].anime_id;
+        titulo[i] = dataArray[i].title;
+        imagem[i] = dataArray[i].img_url
     }
-    jsonArray = [profile, url];
+    jsonArray = [id, titulo, imagem];
 }
 
 module.exports = Router;

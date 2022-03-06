@@ -2,13 +2,18 @@
 
 $.get("http://localhost:3000/withoutfavorites", (result) => {
         var context = document.getElementsByClassName('data2');
-        for(var i = 0; i < 10; i++){
-            const para = document.createElement("p");
-            para.innerText = result[0][i];
-            context[0].appendChild(para);
+        const list = document.createElement("ul");
+        list.className = "profilesWithoutFavorite"
+        context[0].appendChild(list);
+        
+        context = document.getElementsByClassName('profilesWithoutFavorite')
+        for(var i = 0; i < result[0].length; i++){
+            const listItem = document.createElement("li");
             const link = document.createElement("a")
             link.href = result[1][i];
-            link.innerText = result[1][i];
-            context[0].appendChild(link)
+            link.innerText = result[0][i];
+            listItem.appendChild(link);
+
+            context[0].appendChild(listItem)
         }
 });
