@@ -1,13 +1,13 @@
 • 1 consulta envolvendo apenas as operações de seleção e projeção;
-    ￮ SELECT ranked, anime_id, title, rating FROM score_anime WHERE ranked<=10;     
+    ￮ SELECT ranked, anime_id, title, rating, img_url FROM score_anime WHERE ranked<=10;     
         --Retorna os top 10 animes do banco--
 
 • 2 consultas envolvendo a junção de apenas duas relações, sendo que uma deve conter junção externa;
-    ￮ SELECT profile_id, profile_url FROM profile LEFT JOIN favorite ON profile_id=fk_profile_profile_id WHERE fk_score_anime_anime_id IS NULL;     
-        --Retorna o id e url de todos os profiles que não possuem favoritos--
+    ￮ SELECT profile_id, profile_url FROM profile LEFT JOIN favorite ON profile_id=fk_profile_profile_id WHERE fk_score_anime_anime_id IS NULL LIMIT 50;     
+        --Retorna o id e url dos primeiros 50 profiles que não possuem favoritos--
 
-    ￮ SELECT anime_id, title FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre="Seinen";      
-        --Retorna o id e título de todos os animes com o gênero "Seinen"--
+    ￮ SELECT anime_id, title, img_url FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre="Seinen";      
+        --Retorna o id, título e imagem de todos os animes com o gênero "Seinen"--
 
 • 2 consultas envolvendo a junção de três ou mais relações;
     ￮ SELECT title, profile_id, review.link, overall_rating FROM (score_anime JOIN review ON anime_id=fk_score_anime_anime_id) JOIN profile ON profile_id=fk_profile_profile_id;        
@@ -23,15 +23,15 @@
         --Retorna todos os ids de animes que tenham ou o gênero "Action" ou o gênero "Drama"--
 
 • 3 consultas envolvendo funções de agregação;
-    ￮ SELECT gender, count(*) FROM profile GROUP BY gender;     
+    ￮ SELECT gender, count(*) AS count FROM profile GROUP BY gender;     
         --Retorna a contagem de gêneros ("Male", "Female", "Non-Binary", NULL) de todos os profiles--
 
-    ￮ SELECT fk_score_anime_anime_id AS anime_id, avg(avg_score) FROM review GROUP BY fk_score_anime_anime_id;
+    ￮ SELECT fk_score_anime_anime_id AS anime_id, avg(avg_score) AS avg_score FROM review GROUP BY fk_score_anime_anime_id;
         --Retorna a média das notas das reviews para cada anime presente em review--
 
-    ￮  SELECT sum(episodes) FROM score_anime;
+    ￮  SELECT sum(episodes) AS sum FROM score_anime;
         --Retorna a soma de todos os episodios na tabela score_anime--
 
 • 1 consulta envolvendo subconsultas aninhadas.
-    ￮ SELECT title, episodes FROM score_anime WHERE episodes <= (SELECT episodes FROM score_anime WHERE title="Sword Art Online");
-        --Retorna o título e quantidade de episódios de todos os animes com a mesma quantidade de episódios ou menos que Sword Art Online--
+    ￮ SELECT title, episodes FROM score_anime WHERE episodes <= (SELECT episodes FROM score_anime WHERE title='Steins;Gate');
+        --Retorna o título e quantidade de episódios de todos os animes com quantidade de episódios igual ou menor que Steins;Gate--

@@ -1,4 +1,4 @@
-//Query 3: Animes com gênero "Seinen"
+//Query 3: Animes with genre "Seinen"
 
 $.get("http://localhost:3000/seinenanime", (result) => {
         var context = document.getElementsByClassName('data3');
