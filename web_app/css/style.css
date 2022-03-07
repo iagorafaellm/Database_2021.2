@@ -1,0 +1,55 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background do Site */
+body {
+    background-color: #0A1621;
+}
+
+/* Fonte do Nome Site */
+@font-face {
+    font-family: SF-Pro-Display-Bold;
+    src: url(../assets/sfProFamily/SF-Pro-Display-Bold.otf);
+}
+
+/* Título Site e Textos */
+h1 {
+    font-family: SF-Pro-Display-Bold;
+    font-size: 2.875em;
+}
+
+@font-face {
+    font-family: SF-Pro-Text-Bold;
+    src: url(../assets/sfProFamily/SF-Pro-Text-Bold.otf);
+}
+
+/* Texto dos Botões */
+h2 {
+    font-family: SF-Pro-Text-Bold;
+    color: #f2f2f2;
+}
+
+@font-face {
+    font-family: SF-Pro-Display-Regular;
+    src: url(../assets/sfProFamily/SF-Pro-Display-Regular.otf);
+}
+
+/* Textos do Footer */
+h3 {
+    font-family: SF-Pro-Display-Regular;
+    color: #3679F7;
+    font-size: 1.75em;
+}
+
+@font-face {
+    font-family: SF-Pro-Display-Regular;
+    src: url(../assets/sfProFamily/SF-Pro-Display-Regular.otf);
+}
+
+/* Textos do Footer */
+h4 {
+    font-family: SF-Pro-Display-Regular;
+    color: #BFBFBF;
+    font-size: 1.25em;
+}

@@ -4,7 +4,7 @@ import pymysql
 from sqlalchemy import create_engine
 
 #Creating a connection with mysql database 
-# engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'MyUltraSecretPassword' + "@" + 'localhost' + "/" + 'databasename')
+engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'CeraVe#35100' + "@" + 'localhost' + "/" + 'maldb')
 
 #Reads the csv file and tranfers the data to the Pandas DataFrame, which is a two-dimensional tabular data
 #Columns: profile, gender, birthday, favorites_anime, link
@@ -32,6 +32,6 @@ for i in range(0, len(profiles)):
 
 favorites_data = pd.DataFrame(data={"fk_profiles": favorites_profile, "fk_animes_uid": favorites_anime_ids})
 
-# #Sending dataframes to mysql database
-# profiles_data.to_sql('profiles_testing', con=engine, if_exists='replace')
-# favorites_data.to_sql('profile_favorites', con=engine, if_exists='replace')
+#Sending dataframes to mysql database
+profiles_data.to_sql('profiles_testing', con=engine, if_exists='replace')
+favorites_data.to_sql('profile_favorites', con=engine, if_exists='replace')

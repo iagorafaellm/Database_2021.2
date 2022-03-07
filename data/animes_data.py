@@ -4,7 +4,7 @@ import pymysql
 from sqlalchemy import create_engine
 
 #Creating a connection with mysql database 
-# engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'MyUltraSecretPassword' + "@" + 'localhost' + "/" + 'databasename')
+engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'CeraVe#35100' + "@" + 'localhost' + "/" + 'maldb')
 
 #Reads the csv file and tranfers the data to the Pandas DataFrame, which is a two-dimensional tabular data
 #Columns: uid, title, synopsis, genre, aired, episodes, members, popularity, ranked, score, img_url, link
@@ -45,6 +45,6 @@ for i in range(0,len(ids)):
 
 genres_data = pd.DataFrame(data={"fk_uids":genre_ids, "fk_ranks":genre_ranks, "genre":genre_genres})
 
-# #Sending dataframes to mysql database
-# animes_data.to_sql('animes_testing', con=engine, if_exists='replace')
-# genres_data.to_sql('anime_genres', con=engine, if_exists='replace')
+#Sending dataframes to mysql database
+animes_data.to_sql('animes_testing', con=engine, if_exists='replace')
+genres_data.to_sql('anime_genres', con=engine, if_exists='replace')

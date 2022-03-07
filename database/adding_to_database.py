@@ -1,14 +1,14 @@
 from sqlalchemy import create_engine
 
-#Creating a connection with mysql database 
-engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'MyUltraSecretPassword' + "@" + 'localhost' + "/" + 'databasename')
+#Creating a connection with mysql database
+engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'CeraVe#35100' + "@" + 'localhost' + "/" + 'maldb')
 
 #Table "Score_Anime"
 with engine.connect() as con:
   con.execute(
     """
     INSERT INTO Score_Anime(ranked, anime_id, rating, members, popularity, title, synopsis, img_url, link, start_date, end_date, episodes)
-    SELECT ranked, uid, score, members, popularity, title, synopsis, img_url, link, release_date, end_date, episodes FROM animes_testing
+    SELECT ranked, uid, score, members, popularity, title, synopsis, img_url, link, start_date, end_date, episodes FROM animes_testing
     """)
 
 #Table "Profile"

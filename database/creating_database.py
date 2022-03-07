@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 
 #Creating a connection with mysql database 
-engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'MyUltraSecretPassword' + "@" + 'localhost' + "/" + 'databasename')
+engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'CeraVe#35100' + "@" + 'localhost' + "/" + 'maldb')
 
 #Table "Score_Anime"
 with engine.connect() as con:

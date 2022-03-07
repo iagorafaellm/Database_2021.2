@@ -1,18 +1,72 @@
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>display-mysql-data</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    
-    <!-- <script src="../scripts/QueryTop10.js"></script> -->
-    <!-- <script src="../scripts/QueryWithoutFavorite.js"></script> -->
-    <!-- <script src="../scripts/QuerySeinenAnime.js"></script> -->
 
-  </head>
+<head>
+  <title>MyAnimeListDataBase</title>
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/navBar.css" />
+  <link rel="stylesheet" href="../css/animeCard.css" />
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-  <body>
-    <div class="data"></div>
-    <div class="data2"></div>
-    <div class="data3"></div>
-  </body>
+
+  <!-- <div class="animeCard">
+      <div class="container">
+        <img class="animeImg" src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
+        <div class="info">
+          <h4>id#5114</h4>
+          <h3>Fullmetal Alchemist: Brotherhood</h3>
+          <div class="rating">
+            <img class="icon" src="../assets/fi_smile.png" />
+            <h4>9.23</h4>
+          </div>
+        </div>
+        <h4>1</h4>
+      </div>
+    </div> -->
+
+
+  <!-- <script src="../scripts/QueryTop10.js"></script> -->
+  <!-- <script src="../scripts/QueryWithoutFavorite.js"></script> -->
+  <!-- <script src="../scripts/QuerySeinenAnime.js"></script> -->
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="navegacao">
+        <div class="conteudoNavBar">
+          <h1 class="nomeWebApp">MyAnimeListDataBase</h1>
+          <ul>
+            <li><a href="#home"><h2>Home</h2></a></li>
+            <!-- <li><a href="#animeSugestion"><h2>Anime Sugestion</h2></a></li> -->
+            <li class="dropdown">
+              <h2 href="javascript:void(0)" class="dropbtn">Queries</h2>
+              <div class="dropdown-content">
+                <a href="#"><h2>Top 10 Anime</h2></a>
+                <a href="#"><h2>Users with no Fav</h2></a>
+                <a href="#"><h2>Seinen Anime</h2></a>
+                <a href="#"><h2>Link 4</h2></a>
+                <a href="#"><h2>Link 5</h2></a>
+                <a href="#"><h2>Link 6</h2></a>
+                <a href="#"><h2>Link 7</h2></a>
+                <a href="#"><h2>Link 8</h2></a>
+                <a href="#"><h2>Link 9</h2></a>
+                <a href="#"><h2>Link 10</h2></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="data"></div>
+  <div class="data2"></div>
+  <div class="data3"></div>
+</body>
+
 </html>
