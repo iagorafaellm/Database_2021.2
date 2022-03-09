@@ -32,10 +32,10 @@ $.get("http://localhost:3000/top10", (result) => {
             icon.className = "icon";
             icon.src = "../assets/fi_smile.png";
 
-            const score = document.createElement("h4");
+            const score = document.createElement("h5");
             score.innerText = result[3][i];
 
-            const ranking = document.createElement("h4");
+            const ranking = document.createElement("h5");
             ranking.innerText = result[0][i];
 
             rating.appendChild(icon);
