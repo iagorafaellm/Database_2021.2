@@ -9,47 +9,59 @@ body {
 
 /* Fonte do Nome Site */
 @font-face {
-    font-family: SF-Pro-Display-Bold;
-    src: url(../assets/sfProFamily/SF-Pro-Display-Bold.otf);
+    font-family: Overpass-Bold;
+    src: url(../assets/OverpassFamily/Overpass-Bold.ttf);
 }
 
 /* Título Site e Textos */
 h1 {
-    font-family: SF-Pro-Display-Bold;
+    font-family: Overpass-Bold;
     font-size: 2.875em;
 }
 
 @font-face {
-    font-family: SF-Pro-Text-Bold;
-    src: url(../assets/sfProFamily/SF-Pro-Text-Bold.otf);
+    font-family: Overpass-Medium;
+    src: url(../assets/OverpassFamily/Overpass-Medium.ttf);
 }
 
 /* Texto dos Botões */
 h2 {
-    font-family: SF-Pro-Text-Bold;
+    font-family: Overpass-Medium;
     color: #f2f2f2;
 }
 
 @font-face {
-    font-family: SF-Pro-Display-Regular;
-    src: url(../assets/sfProFamily/SF-Pro-Display-Regular.otf);
+    font-family: Overpass-Regular;
+    src: url(../assets/OverpassFamily/Overpass-Regular.ttf);
 }
 
 /* Textos do Footer */
 h3 {
-    font-family: SF-Pro-Display-Regular;
-    color: #3679F7;
+    font-family: Overpass-Regular;
+    color: #1A1D1E;
     font-size: 1.75em;
 }
 
 @font-face {
-    font-family: SF-Pro-Display-Regular;
-    src: url(../assets/sfProFamily/SF-Pro-Display-Regular.otf);
+    font-family: Overpass-RegularRegular;
+    src: url(../assets/OverpassFamily/Overpass-Regular.ttf);
 }
 
 /* Textos do Footer */
 h4 {
-    font-family: SF-Pro-Display-Regular;
+    font-family: Overpass-Regular;
     color: #BFBFBF;
+    font-size: 1.25em;
+}
+
+@font-face {
+    font-family: Overpass-RegularRegular;
+    src: url(../assets/OverpassFamily/Overpass-Regular.ttf);
+}
+
+/* Textos do Footer */
+h5 {
+    font-family: Overpass-Regular;
+    color: #000000;
     font-size: 1.25em;
 }
