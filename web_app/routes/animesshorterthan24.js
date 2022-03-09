@@ -4,7 +4,7 @@ const mysqlConnection = require("../connection")
 var titulo = [], episodios = [];
 
 Router.get("/", (req,res)=>[
-    mysqlConnection.query("SELECT title, episodes FROM score_anime WHERE episodes <= (SELECT episodes FROM score_anime WHERE title='Steins;Gate')", (err, rows, fields)=>{
+    mysqlConnection.query("SELECT title, episodes FROM score_anime WHERE episodes <= (SELECT episodes FROM score_anime WHERE title='Steins;Gate') LIMIT 100", (err, rows, fields)=>{
         if(!err){
             formatData(rows);
             res.send(jsonArray);
