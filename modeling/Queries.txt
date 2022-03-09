@@ -15,7 +15,7 @@
 
     ￮ SELECT profile_id, gender, birthday FROM Profile JOIN Favorite ON profile_id=fk_Profile_profile_id 
         JOIN Genre ON Favorite.fk_Score_Anime_anime_id=Genre.fk_Score_Anime_anime_id WHERE genre = "Shounen" AND birthday LIKE '%1996' GROUP BY profile_id;     
-        --Retorna os profiles que tenham um anime do gênero "Shounen" e que tenha nascido no ano 1996--
+        --Retorna os profiles nascidos em 1996 que tenham como favorito um anime do gênero "Shounen"--
 
 • 1 consulta envolvendo uma das operações sobre conjuntos (união, diferença ou intersecção);
     ￮ SELECT anime_id FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre="Drama" 

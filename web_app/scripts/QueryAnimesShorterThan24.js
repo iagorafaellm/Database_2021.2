@@ -5,6 +5,7 @@ $.get("http://localhost:3000/animesshorterthan24", (result) => {
         const table = document.createElement("table");
         table.className = "short-animes";
         const tableHeader = document.createElement("tr");
+        tableHeader.className = "animesShorterHeader";
         tableHeader.innerHTML = "<td>Title</td><td>Episode Count</td>";
         table.appendChild(tableHeader);
         context[0].appendChild(table);

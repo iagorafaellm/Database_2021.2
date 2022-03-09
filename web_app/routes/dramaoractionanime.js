@@ -4,7 +4,7 @@ const mysqlConnection = require("../connection")
 var  id = [];
 
 Router.get("/", (req,res)=>[
-    mysqlConnection.query("SELECT anime_id FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre='Drama' UNION SELECT anime_id FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre='Action'", (err, rows, fields)=>{
+    mysqlConnection.query("SELECT anime_id FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre='Drama' UNION SELECT anime_id FROM score_anime JOIN genre ON anime_id=fk_score_anime_anime_id WHERE genre='Action' LIMIT 100", (err, rows, fields)=>{
         if(!err){
             formatData(rows);
             res.send(jsonArray);

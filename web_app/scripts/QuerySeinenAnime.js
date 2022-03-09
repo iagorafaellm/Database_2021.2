@@ -1,22 +1,59 @@
 //Query 3: Animes with genre "Seinen"
 
 $.get("http://localhost:3000/seinenanime", (result) => {
-        var context = document.getElementsByClassName('data3');
-        const table = document.createElement("table");
-        table.className = "seinenAnimes";
-        const tableHeader = document.createElement("tr");
-        tableHeader.innerHTML = "<td>Image</td><td>Anime ID</td><td>Title</td>";
-        table.appendChild(tableHeader);
-        context[0].appendChild(table);
-        
-        context = document.getElementsByClassName('seinenAnimes');
-        for(var i = 0; i < result[0].length; i++){
-            const tablerow = document.createElement("tr");
-            const animeImage = document.createElement("img");
+    var main = document.getElementsByClassName("data3");
+    var rownum;
+    
+    for(var i = 0; i < result[0].length; i++){
 
-            tablerow.innerHTML = "<td></td>" + "<td>" + result[0][i] + "</td>" + "<td>" + result[1][i] + "</td>";
-            tablerow.firstChild.innerHTML = "<img src=" + result[2][i] + ">";
+        const animeCard = document.createElement("div");
+        animeCard.className = "animeCard";
 
-            context[0].appendChild(tablerow)
+        const container = document.createElement("div");
+        container.className = "container";
+
+        const animeImg = document.createElement("img");
+        animeImg.className = "animeImg";
+        animeImg.src = result[4][i];
+
+        const info = document.createElement("div");
+        info.className = "info";
+
+        const id = document.createElement("h4");
+        id.innerText = result[1][i];
+
+        const title = document.createElement("h3");
+        title.innerText = result[2][i];
+
+        const rating = document.createElement("div");
+        rating.className = "rating";
+
+        const icon = document.createElement("img");
+        icon.className = "icon";
+        icon.src = "../assets/fi_smile.png";
+
+        const score = document.createElement("h5");
+        score.innerText = result[3][i];
+
+        const ranking = document.createElement("h5");
+        ranking.innerText = result[0][i];
+
+        rating.appendChild(icon);
+        rating.appendChild(score);
+        info.appendChild(id);
+        info.appendChild(title);
+        info.appendChild(rating);
+        container.append(animeImg);
+        container.appendChild(info);
+        container.appendChild(ranking);
+        animeCard.appendChild(container);
+
+        if(i%2 == 0){
+            rownum = document.createElement("div");
+            rownum.className = "line";
         }
+
+        rownum.appendChild(animeCard)
+        main[0].appendChild(rownum);
+    }
 });

@@ -5,6 +5,7 @@ $.get("http://localhost:3000/shounen1996", (result) => {
         const table = document.createElement("table");
         table.className = "shounen1996";
         const tableHeader = document.createElement("tr");
+        tableHeader.className = "shounenHeader";
         tableHeader.innerHTML = "<td>Profile</td><td>Gender</td><td>Birthday</td>";
         table.appendChild(tableHeader);
         context[0].appendChild(table);

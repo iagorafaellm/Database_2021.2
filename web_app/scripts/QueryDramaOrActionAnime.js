@@ -1,10 +1,11 @@
 //Query 6: Animes with "Drama" or "Action" genres
 
 $.get("http://localhost:3000/dramaoractionanime", (result) => {
-        var context = document.getElementsByClassName('data');
+        var context = document.getElementsByClassName('data6');
         const table = document.createElement("table");
         table.className = "drama-action-anime";
         const tableHeader = document.createElement("tr");
+        tableHeader.className = "dractionHeader";
         tableHeader.innerHTML = "<td>ids</td>";
         table.appendChild(tableHeader);
         context[0].appendChild(table);

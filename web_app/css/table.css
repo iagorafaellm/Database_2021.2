@@ -1,0 +1,36 @@
+/* Arquivo CSS das Tabelas (table) */
+
+.profilesWithoutFavorite {
+  color: #ffffff;
+  font-family: Overpass-Thin;
+  font-size: 1.25em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  list-style-type: circle;
+}
+
+.data2, .data4, .data5, .data6, .data7, .data8, .data9, .data10 {
+  color: #ffffff;
+  width: 100%;
+  /* margin: 0 10% 0 10%; */
+  padding-bottom: 2.5%;
+  font-size: 1.75em;
+  display: grid;
+  grid-column-gap: 20%;
+  justify-content: center;
+  align-items: center;
+  font-family: Overpass-Thin;
+  font-size: 1.25em;
+}
+
+.shounenHeader, .dractionHeader, .genderHeader, .averageHeader, .animesShorterHeader {
+    font-family: Overpass-Regular;
+}
+
+.shounen1996, .drama-action-anime, .gender-count, .review-averages, .short-animes {
+  color: #ffffff;
+  padding-bottom: 5%;
+}
