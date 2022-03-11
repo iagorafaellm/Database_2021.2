@@ -4,7 +4,7 @@ import pymysql
 from sqlalchemy import create_engine
 
 #Creating a connection with mysql database 
-engine = create_engine("mysql+pymysql://" + 'root' + ":" + 'CeraVe#35100' + "@" + 'localhost' + "/" + 'maldb')
+engine = create_engine("mysql+pymysql://" + 'username' + ":" + 'password' + "@" + 'localhost' + "/" + 'databasename')
 
 #Reads the csv file and tranfers the data to the Pandas DataFrame, which is a two-dimensional tabular data
 #Columns: uid, profile, anime_uid, text, score, scores, link
