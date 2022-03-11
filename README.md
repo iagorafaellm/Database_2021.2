@@ -1,12 +1,15 @@
 # Database_2021.2
 MyAnimeList Database Work of 2021.2 (February/2022) from UFRJ.
 
+<img src="https://pbs.twimg.com/media/ExQNEqvXEAA7ydE?format=jpg&name=4096x4096" align="center" width="750">
 
 ## Pré-requisito
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Você instalou a versão mais recente de `mysql`
 * Você fez o download dos arquivos .csv pelo site https://www.kaggle.com/marlesson/myanimelist-dataset-animes-profiles-reviews e os adicionou à pasta [csv_files](csv_files/) (os arquivos [animes.csv](csv_files/animes.csv) e [profiles.csv](csv_files/profiles.csv) já estão baixados, já o arquivo [reviews.csv](csv_files/reviews.csv) não foi baixado para o repositório por questões de limite de upload do GitHub)
+
+<img src="https://cdn.discordapp.com/attachments/844654958481113127/951159833653022790/176119.jpg" width="750">
 
 ## Como criar e popular o Banco de Dados?
 
@@ -47,6 +50,8 @@ var mysqlConnection = mysql.createConnection({
 });
 ```
 
+<img src="https://i.pinimg.com/originals/01/80/e7/0180e73a7424368b51f58244e748da41.jpg" width="750">
+
 ## Como servir a nossa Aplicação Web?
 
 1. Abra o terminal na pasta [web_app](/web_app)
@@ -61,6 +66,7 @@ var mysqlConnection = mysql.createConnection({
 ```
   npm start
 ```
+<img src="web_app/assets/tenkiNoKo.gif" width="750">
 
 ## Autoria
 * [Daniel Qiu](https://github.com/DANIELLWQIU)
@@ -68,3 +74,5 @@ var mysqlConnection = mysql.createConnection({
 * [Iago Rafael Lucas Martins](https://github.com/iagorafaellm)
 * [Lucas Araujo Carvalho](https://github.com/Chicolego)
 * [Lucas Moreno Silva](https://github.com/Lucas-LMS)
+
+<img src="web_app/assets/autores.png" width="750">
